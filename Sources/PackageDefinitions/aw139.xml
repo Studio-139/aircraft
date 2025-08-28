@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetPackages>
+  <Package Name="aw139" Version="0.0.1">
+    <ItemGroup>
+      <AssetPackage name="aw139" type="SimObject" directory="..\Sources\SimObjects\Helicopters\aw139"/>
+    </ItemGroup>
+    <Flags>
+      <VisibleInStore>false</VisibleInStore>
+      <CanBeReferenced>true</CanBeReferenced>
+    </Flags>
+  </Package>
+</AssetPackages>

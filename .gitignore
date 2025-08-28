@@ -1,0 +1,22 @@
+# MSFS build artefacts
+/Build/
+/Packages/
+/package/layout.json
+*.cache
+*.log
+
+# Blender
+*.blend1
+*.blend2
+__pycache__/
+*.pyc
+
+# Audio banks and large binaries use LFS
+*.pck
+*.bnk
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

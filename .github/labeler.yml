@@ -1,0 +1,8 @@
+"area:model":
+  - "Sources/SimObjects/Helicopters/aw139/model/**"
+"area:texture":
+  - "Sources/SimObjects/Helicopters/aw139/texture/**"
+"area:panel":
+  - "Sources/SimObjects/Helicopters/aw139/panel/**"
+"area:sound":
+  - "Sources/SimObjects/Helicopters/aw139/sound/**"

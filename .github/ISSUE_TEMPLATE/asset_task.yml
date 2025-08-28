@@ -1,0 +1,11 @@
+name: Asset task
+labels: asset
+body:
+  - type: input
+    id: area
+    attributes:
+      label: Area model, texture, panel, sound
+  - type: textarea
+    id: spec
+    attributes:
+      label: Spec and references

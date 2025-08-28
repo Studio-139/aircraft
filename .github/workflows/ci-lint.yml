@@ -1,0 +1,18 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Check Git LFS pointers
+        run: git lfs ls-files | wc -l
+      - name: Basic XML well formed check
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          find Sources -name "*.xml" -print -exec xmllint --noout {} \;

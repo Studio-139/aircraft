@@ -1,0 +1,16 @@
+name: Bug report
+labels: bug
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Describe the bug and steps to reproduce
+  - type: input
+    id: version
+    attributes:
+      label: Repo commit or tag
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots

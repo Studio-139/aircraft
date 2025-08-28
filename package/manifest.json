@@ -1,0 +1,9 @@
+{
+  "dependencies": [],
+  "content_type": "AIRCRAFT",
+  "title": "AW139 Community",
+  "manufacturer": "Community",
+  "creator": "Studio 139",
+  "package_version": "0.0.1",
+  "minimum_game_version": "1.0.0.0"
+}

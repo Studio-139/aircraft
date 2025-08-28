@@ -1,0 +1,22 @@
+name: LFS guard
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Fail if large files are not in LFS
+        run: |
+          THRESHOLD=10485760
+          git diff --name-only origin/main... | while read f; do
+            [ -f "$f" ] || continue
+            size=$(wc -c <"$f")
+            if [ $size -gt $THRESHOLD ]; then
+              if ! git check-attr -a -- "$f" | grep -q 'filter: lfs'; then
+                echo "Large file not in LFS: $f ($size bytes)" >&2
+                exit 1
+              fi
+            fi
+          done
